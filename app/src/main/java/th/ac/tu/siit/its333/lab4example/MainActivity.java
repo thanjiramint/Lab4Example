@@ -33,7 +33,7 @@ public class MainActivity extends ActionBarActivity
         SQLiteDatabase dbw = helper.getWritableDatabase();
         ContentValues ri = new ContentValues();
         ri.put("title", "AI homework");
-        ri.put("priority", 3);
+        ri.put("priority", 4);
         long new_id = dbw.insert("todo", null, ri);
         dbw.close();
 
@@ -86,7 +86,9 @@ public class MainActivity extends ActionBarActivity
                             int position, long id) {
         Log.d("todo", id + " is clicked");
     }
+        //short click will appear id is cliked
 
+        //long click will delete.
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view,
                                    int position, long id) {
